@@ -2,9 +2,9 @@ import { createContext, useState, useEffect } from "react";
 import axios from "axios"; //send http req to backend
 import toast from "react-hot-toast";
 import {io} from "socket.io-client";
+import server from "../src/environment";
 
-
-const backendUrl = import.meta.env.VITE_BACKEND_URL;
+const backendUrl = server;
 axios.defaults.baseURL = backendUrl;
 
 export const AuthContext = createContext();
