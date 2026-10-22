@@ -10,7 +10,7 @@ import { AuthContext } from '../context/AuthContext';
 function App() {
   const {authUser} = useContext(AuthContext);
   return (
-    <div className="bg-[url('./src/assets/bgImg.png')] bg-cover">
+    <div>
        <Toaster/>   {/*for pop up msgs */}
       <Routes>
         <Route path="/" element = {authUser? <HomePage/>: <Navigate to = "/login"/>}/>
